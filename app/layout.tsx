@@ -24,6 +24,9 @@ export const metadata: Metadata = {
     shortcut: "/favicon.ico",
     apple: "/icon-192.png",
   },
+  verification: {
+    google: "sNuQMPPzNm5Pu7nY1tiCt8VBGRhgITiD7zrmE4JARks",
+  },
   openGraph: {
     title: "BudgetManager",
     description: "Manage your spending, make your money last longer",
