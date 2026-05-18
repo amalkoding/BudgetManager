@@ -1,8 +1,10 @@
-const CACHE_NAME = 'budget-manager-cache-v2';
+const CACHE_NAME = 'budget-manager-cache-v3';
 const urlsToCache = [
   '/',
   '/manifest.webmanifest',
   '/favicon.ico',
+  '/icon-192.png',
+  '/icon-512.png',
 ];
 
 self.addEventListener('install', (event) => {
