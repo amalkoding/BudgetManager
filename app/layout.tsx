@@ -6,6 +6,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://bumager.vercel.app"),
   title: "BudgetManager – Manage your spending, make your money last longer",
   description:
     "A gamified personal finance app to help you control your daily expenses in a fun and motivating way.",
@@ -18,10 +19,23 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "BudgetManager" }],
   robots: "index, follow",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/icon-192.png",
+  },
   openGraph: {
     title: "BudgetManager",
     description: "Manage your spending, make your money last longer",
     type: "website",
+    images: [
+      {
+        url: "/icon-512.png",
+        width: 512,
+        height: 512,
+        alt: "BudgetManager Logo",
+      },
+    ],
   },
 };
 
