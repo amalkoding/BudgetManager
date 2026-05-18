@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import PwaRegister from "../components/PwaRegister";
 import "./globals.css";
 
@@ -58,6 +59,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <PwaRegister />
         {children}
+        <SpeedInsights />
       </body>
     </html>
   );
