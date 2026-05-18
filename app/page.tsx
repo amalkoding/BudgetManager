@@ -46,8 +46,8 @@ export default function Home() {
     return (
       <div className="min-h-screen bg-background flex items-center justify-center">
         <div className="text-center">
-          <div className="w-16 h-16 rounded-2xl bg-gradient-primary mx-auto mb-4 animate-pulse flex items-center justify-center text-3xl">
-            💰
+          <div className="w-16 h-16 rounded-2xl bg-gradient-primary mx-auto mb-4 animate-pulse flex items-center justify-center overflow-hidden">
+            <img src="/icon-192.png" alt="Logo" className="w-full h-full object-cover" />
           </div>
           <p className="text-text-secondary text-sm animate-pulse">Loading data...</p>
         </div>

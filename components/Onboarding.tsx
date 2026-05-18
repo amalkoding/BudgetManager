@@ -55,8 +55,8 @@ export default function Onboarding({ onComplete }: OnboardingProps) {
       <div className="relative w-full max-w-md animate-slide-up">
         {/* Logo & Header */}
         <div className="text-center mb-10">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-primary mb-5 glow-primary">
-            <span className="text-3xl">💰</span>
+          <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-primary mb-5 glow-primary overflow-hidden">
+            <img src="/icon-192.png" alt="Logo" className="w-full h-full object-cover" />
           </div>
           <h1 className="text-4xl font-black text-text-main mb-2 tracking-tight">
             Budget<span className="text-gradient">Manager</span>

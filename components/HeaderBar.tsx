@@ -108,8 +108,8 @@ export default function HeaderBar({ data, onReset, onImport }: HeaderBarProps) {
         <div className="max-w-md mx-auto flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-xl bg-gradient-primary flex items-center justify-center text-sm glow-primary">
-              💰
+            <div className="w-8 h-8 rounded-xl bg-gradient-primary flex items-center justify-center glow-primary overflow-hidden">
+              <img src="/icon-192.png" alt="Logo" className="w-full h-full object-cover" />
             </div>
             <div>
               <h1 className="text-text-main font-black text-base leading-none">
