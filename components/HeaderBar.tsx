@@ -55,7 +55,7 @@ export default function HeaderBar({ data, onReset, onImport }: HeaderBarProps) {
 
     // Prepare table data
     const tableBody = data.checkIns.map((record) => {
-      let statusLabel = record.status;
+      let statusLabel: string = record.status || "-";
       if (record.status === 'safe') statusLabel = 'Safe';
       if (record.status === 'warning') statusLabel = 'Warning';
       if (record.status === 'danger') statusLabel = 'Danger';

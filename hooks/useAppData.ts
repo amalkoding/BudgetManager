@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect, useCallback } from "react";
-import type { AppData, DayRecord, CheckInStatus, DashboardStats } from "../types";
+import type { AppData, DayRecord, CheckInStatus, DashboardStats } from "../app/types";
 
 const STORAGE_KEY = "atur-pengeluaran-data";
 

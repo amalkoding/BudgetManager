@@ -15,13 +15,16 @@ export default function Home() {
   const { fireSuccess, fireStreak } = useConfetti();
   const prevStreakRef = useRef(0);
 
+  const streakCount = stats?.streakCount;
+  const streakType = stats?.streakType;
+
   // Fire confetti on streak milestones
   useEffect(() => {
-    if (!stats) return;
+    if (streakCount === undefined || streakType === undefined) return;
     const prev = prevStreakRef.current;
-    const curr = stats.streakCount;
+    const curr = streakCount;
 
-    if (curr > prev && stats.streakType === "safe") {
+    if (curr > prev && streakType === "safe") {
       if (curr >= 3) {
         fireStreak(curr);
       } else if (curr === 1) {
@@ -29,7 +32,7 @@ export default function Home() {
       }
     }
     prevStreakRef.current = curr;
-  }, [stats?.streakCount, stats?.streakType, fireSuccess, fireStreak]);
+  }, [streakCount, streakType, fireSuccess, fireStreak]);
 
   const handleCheckIn = (status: NonNullable<CheckInStatus>, note?: string, spent?: number) => {
     checkIn(status, note, spent);

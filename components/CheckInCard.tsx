@@ -102,7 +102,7 @@ export default function CheckInCard({ stats, onCheckIn }: CheckInCardProps) {
             className="text-xs font-semibold"
             style={{ color: STATUS_CONFIG[todayStatus].color }}
           >
-            Today's status: {STATUS_CONFIG[todayStatus].label}
+            Today&apos;s status: {STATUS_CONFIG[todayStatus].label}
           </p>
           <span className="ml-auto text-text-secondary text-xs">Refill to change</span>
         </div>
