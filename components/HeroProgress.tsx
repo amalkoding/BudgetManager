@@ -193,9 +193,9 @@ export default function HeroProgress({ stats }: HeroProgressProps) {
           <button
             onClick={() => {
               const totalSpentStr = new Intl.NumberFormat("id-ID").format(stats.totalSpent);
-              const perfText = stats.overallPerformance === "excellent" ? "Sangat Baik 🔥" : stats.overallPerformance === "good" ? "Baik 👍" : stats.overallPerformance === "caution" ? "Perlu Perhatian ⚠️" : "Butuh Perbaikan 💪";
-              const streakText = stats.streakCount > 0 ? `\n🔥 Streak: ${stats.streakCount} hari ${stats.streakType === "safe" ? "aman" : "boros"}!` : "";
-              const text = `Saya sedang mengatur keuangan di BudgetManager! 🎯\n\n📊 Hari ke-${stats.daysElapsed} dari ${stats.totalDays}\n💰 Total pengeluaran: Rp ${totalSpentStr}\n📈 Status saat ini: ${perfText}${streakText}\n\nIkutan atur pengeluaranmu juga di sini 👇\n${window.location.origin}`;
+              const perfText = stats.overallPerformance === "excellent" ? "Sangat Baik" : stats.overallPerformance === "good" ? "Baik" : stats.overallPerformance === "caution" ? "Perlu Perhatian" : "Butuh Perbaikan";
+              const streakText = stats.streakCount > 0 ? `\n*Streak:* _${stats.streakCount} hari ${stats.streakType === "safe" ? "aman" : "boros"} berturut-turut!_` : "";
+              const text = `*BudgetManager - Financial Challenge*\n\n_Hari ke-${stats.daysElapsed} dari ${stats.totalDays}_\n*Total Pengeluaran:* Rp ${totalSpentStr}\n*Status Saat Ini:* _${perfText}_${streakText}\n\nIkutan atur pengeluaranmu juga di sini:\n${window.location.origin}`;
               window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, "_blank");
             }}
             className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#25D366]/10 border border-[#25D366]/30 text-[#25D366] hover:bg-[#25D366] hover:text-white transition-all shrink-0"
